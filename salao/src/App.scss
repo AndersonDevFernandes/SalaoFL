@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Satisfy&display=swap');
 
 $primary-color: #FFF0F7;
 $secondary-color: #9d2c71;
 $third-color: rgb(157,44,113,255) 0px 20px 30px -10px;
-$font-stack: "M PLUS Rounded 1c", sans-serif;
+$four-color: #382B4F;
+$font-stack: "Playfair Display", serif;
 
 *{
   box-sizing: border-box;
@@ -50,11 +51,10 @@ $font-stack: "M PLUS Rounded 1c", sans-serif;
   align-items: center;
   background-color: transparent;
   border: none;
-  margin: 2rem;
+  margin: 1rem;
   font-size: 1.6rem;
   box-shadow: $third-color;
-  padding: 1.5rem;
-  border-radius: 50%;
+  padding: 1rem;
   cursor: pointer;
   color: $secondary-color;
   font-family: $font-stack;
@@ -83,7 +83,6 @@ $font-stack: "M PLUS Rounded 1c", sans-serif;
   background: rgb(157,44,113);
   background: linear-gradient(180deg, rgba(157,44,113,1) 0%, rgba(159,159,159,0) 40%);
   justify-content: space-evenly;
-
 }
 
 .perfil{
@@ -94,44 +93,61 @@ $font-stack: "M PLUS Rounded 1c", sans-serif;
 }
 
 .perfil1{
-  width: 20rem;
+  width: 100%rem;
   margin-bottom: 2rem;
   margin-top: 1.3rem;
-  border-radius: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  
 }
 
 .ImgFoto{
-  width: 25rem;
-  height: 25rem;
-  border-radius: 10%;
-  margin-left: 0.8rem;
-  padding: 1.3rem;
-  background: rgb(157,44,113);
-background: linear-gradient(34deg, rgba(157,44,113,1) 0%, rgba(255,255,255,0) 19%, rgba(255,255,255,0) 82%, rgba(157,44,113,1) 100%);
+  width: 45rem;
+  height: 45rem;
+  margin-left: 10.8rem;
+  padding: 3.5rem;
+  border-right: linear-gradient(to right, transparent, $secondary-color, transparent);;
+  
+}
+
+.text-mid{
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4.6rem;
 }
 
 .name{
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-family: $font-stack;
-  color: $primary-color;
+  color: $secondary-color;
   margin-left: 2rem;
   margin-bottom: 1.5rem;
 }
 
+.fname{
+ font-size: 2.0rem;
+ font-size: 4.1rem;
+ font-family: $font-stack;
+ color: $primary-color;
+}
+
 .text{
   width: 100%rem;
-  margin-left: 14rem;
-  margin-right: 8rem;
 }
 
 .namex{
-  font-size: 2.5rem;
+  width: 100%;
+  font-size: 3.2rem;
   font-weight: 500;
   font-family: $font-stack;
   color: $secondary-color;
   background: rgb(157,44,113);
-  background: linear-gradient(34deg, rgba(157,44,113,1) 0%, rgba(255,255,255,0) 19%, rgba(255,255,255,0) 82%, rgba(157,44,113,1) 100%);
-  border-radius: 5%;
+background: linear-gradient(338deg, rgba(157,44,113,1) 0%, rgba(255,255,255,0) 19%);
   padding: 1.3rem;
 
 }
@@ -145,6 +161,35 @@ background: linear-gradient(34deg, rgba(157,44,113,1) 0%, rgba(255,255,255,0) 19
 
 }
 
+.line{  
+  height: 1px; /* altura da linha */
+  background: linear-gradient(to right, transparent, $secondary-color, transparent);
+  margin-bottom: 2rem;
+}
+
+.perfil1 {
+  position: relative; /* Para garantir que o gradiente fique por cima do conteúdo */
+  padding-right: 1px; /* Adiciona espaço para o gradiente ocupar */
+}
+
+.perfil1::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 80%;
+  width: 1px; /* Largura do gradiente */
+  background: linear-gradient(to bottom, transparent, $secondary-color, transparent);
+}
+
+
+
+
+.nameMid{
+  font-size: 3rem;
+  
+}
+
 .profile{
   display: flex;
   align-items: center;
@@ -155,21 +200,18 @@ background: linear-gradient(34deg, rgba(157,44,113,1) 0%, rgba(255,255,255,0) 19
   width: 80rem;
   height: 25rem;
   margin-left: 2rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 5rem;
+  margin-top: 3rem;
   background: rgb(157,44,113);
-  background: linear-gradient(34deg, rgba(157,44,113,1) 0%, rgba(255,255,255,0) 19%, rgba(255,255,255,0) 82%, rgba(157,44,113,1) 100%);
-  border-radius: 2%;
-  
+background: linear-gradient(227deg, rgba(157,44,113,1) 0%, rgba(255,255,255,0) 12%);
 }
 
 .slider-box{
-  width: 30rem;
+  width: 100%;
   height: 30rem;
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  
-  
 }
 
 .slider-box-order{
@@ -204,17 +246,19 @@ background: linear-gradient(34deg, rgba(157,44,113,1) 0%, rgba(255,255,255,0) 19
 .btn-slider{
   background-color: transparent;
   border-radius: 10%;
-  padding: 0.2rem;
+  padding: 0.5rem;
   border: $secondary-color 0.2rem solid;
   font-family: $font-stack;
-  color: $secondary-color;
+  color: $primary-color;
   font-weight: 700;
   cursor: pointer;
+  transition: 0.8s;
+  background-color: $secondary-color;
 }
 
 .btn-slider:hover{
-  color: $primary-color;
-  background-color: $secondary-color;
+  color: $secondary-color;
+  background-color: $primary-color;
   transition: 1.3s;
   box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
 }

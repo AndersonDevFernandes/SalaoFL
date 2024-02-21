@@ -1,7 +1,7 @@
 
 // import './App.sass'
 import Logo from './Imagens/Logo.png'
-import ImgFoto from './Imagens/Sol.png'
+import ImgFoto from './Imagens/stefany1.png'
 import CarrouselMid from './Components/CarrouselBody2'
 import Instagram  from './Imagens/intagram.png'
 import Facebook from './Imagens/facebook.png'
@@ -27,7 +27,7 @@ function App() {
         </div>
         <div className='redes-sociais'>
           <div className='media'>
-            <a href="https://www.instagram.com/salveline/"><img src={Instagram} alt="Instagram" className='socialMedia' /></a>
+            <a href="https://www.instagram.com/espaco_stefany_nogueira/reels/"><img src={Instagram} alt="Instagram" className='socialMedia' /></a>
           </div>
           <div className='media'>
             <a href=""><img src={Facebook} alt="" className='socialMedia'/></a>
@@ -43,18 +43,21 @@ function App() {
         <div className='profile'>
          <div className='perfil'>
           <div className='perfil1'>
-           <p className='name'>Stefany Nogueira</p>
-           <img src={ImgFoto} className='ImgFoto' />
-          </div>
+           <p className=' fname'>Stefany Nogueira</p>
+           <img src={ImgFoto} className='ImgFoto lineVert' />
+          </div>          
           <div className='text'>
             <p className='name'>Perfil</p>
-            <p className='namex'>Sou uma profissional apaixonada e dedicada no ramo da beleza, 
-             especializada em cabelo e unhas. Com anos de experiência e um profundo conhecimento das últimas tendências e técnicas, 
-             meu objetivo é <b> realçar a beleza única de cada cliente, </b> proporcionando serviços de alta qualidade e resultados impressionantes.</p>
+            <p className='namex'>
+             Com anos de experiência e um profundo conhecimento das últimas tendências e técnicas, 
+             meu objetivo é <b> realçar a beleza única de cada cliente, </b> </p>
           </div>
-        <div/>     
-       </div>
+        </div>
       </div>
+    </div>
+    <div className='line'></div>
+    <div className='text-mid'>
+     <p className='nameA nameMid'>Catagolo de Serviços</p>
     </div>
      <div className='body2'>
       <CarrouselMid/>
