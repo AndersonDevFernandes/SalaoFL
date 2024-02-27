@@ -1,5 +1,5 @@
-
-// import './App.sass'
+// eslint-disable-next-line no-unused-vars
+import React from 'react'
 import Logo from './Imagens/Logo.png'
 import ImgFoto from './Imagens/stefany1.png'
 import CarrouselMid from './Components/CarrouselBody2'
@@ -9,12 +9,9 @@ import TikTok from './Imagens/tiktok.png'
 import Wave from './Components/Wave'
 import './App.scss';
 
-
 function App() {
-
   
-  return (
-    
+  return (    
     <div className='main'>
       <div className='header'>
         <div className='box-logo'>
@@ -62,10 +59,11 @@ function App() {
      <div className='body2'>
       <CarrouselMid/>
      </div>
-     <div className='body3'></div>
+     <div className='body3'>
+      
+     </div>
      <div className='footer'></div>  
     </div>
-
   )
 }
 
