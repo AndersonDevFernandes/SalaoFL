@@ -43,30 +43,41 @@ $font-stack: "Playfair Display", serif;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  
 }
 
-.btn{
-  display: flex;
-  align-items: center;
-  background-color: transparent;
-  border: none;
-  margin: 1rem;
-  font-size: 1.6rem;
-  box-shadow: $third-color;
-  padding: 1rem;
-  cursor: pointer;
-  color: $secondary-color;
+.btn {
   font-family: $font-stack;
-  transition: 1.3s;
+  color: $secondary-color;
+  font-size: 2.2rem;
+  width: 15rem; /* Corrigido o erro na largura */
+  height: 5rem; /* Adicionado a altura */
+  border: none; 
+  border-radius: 0.6rem;  
+  position: relative;
+  overflow: hidden;
+  transition: color 1.6s, background 1.6s;
+  background-color: transparent;
+  margin: 1.2rem;
+  display: block;
+  cursor: pointer;
 }
 
-.btn:hover{
-  color: $primary-color;
+.btn::after{
+  content: " ";
+  width: 0%;
   background-color: $secondary-color;
-  transition: 1.3s;
-  box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
-}
+  border-bottom: 0.1rem solid $secondary-color;
+  transition: 1.5s;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+ }
+
+ .btn:hover::after{
+  width: 100%;
+ }
 
 
 .socialMedia{
@@ -76,6 +87,14 @@ $font-stack: "Playfair Display", serif;
   box-shadow: rgb(157, 62, 62) 0px 20px 30px -10px;
   border-radius: 10%;
   cursor: pointer;
+  transition: transform 1.6s ease-in-out;  
+  transition: box-shadow 0.2s ease-in-out; 
+}
+
+.socialMedia:hover{
+  transition: 1.6s;
+  transform: scale(1.5); 
+  box-shadow: 0 15px 15px rgba(0,0,0,0.6);
 }
 
 .body1{
@@ -103,13 +122,14 @@ $font-stack: "Playfair Display", serif;
   
 }
 
-.ImgFoto{
-  width: 45rem;
-  height: 45rem;
-  margin-left: 10.8rem;
+.ImgFotox{
+  width: 50rem;
+  height: 60rem;
   padding: 3.5rem;
-  border-right: linear-gradient(to right, transparent, $secondary-color, transparent);;
-  
+  border-right: linear-gradient(to right, transparent, $secondary-color, transparent);
+  background-image: url(./Imagens/peakpx.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
 .text-mid{
@@ -129,12 +149,12 @@ $font-stack: "Playfair Display", serif;
   margin-bottom: 1.5rem;
 }
 
-.fname{
- font-size: 2.0rem;
- font-size: 4.1rem;
- font-family: $font-stack;
- color: $primary-color;
-}
+// .fname{
+//  font-size: 2.0rem;
+//  font-size: 4.1rem;
+//  font-family: $font-stack;
+//  color: $primary-color;
+// }
 
 .text{
   width: 100%rem;
@@ -153,11 +173,12 @@ background: linear-gradient(338deg, rgba(157,44,113,1) 0%, rgba(255,255,255,0) 1
 }
 
 .nameA{
-  font-size: 1.3rem;
+ font-size: 0.9rem;
   font-weight: 600;
   font-family: $font-stack;
-  color: $secondary-color;
+  color: $primary-color;
   padding: 0.5rem;
+  
 
 }
 
@@ -182,12 +203,8 @@ background: linear-gradient(338deg, rgba(157,44,113,1) 0%, rgba(255,255,255,0) 1
   background: linear-gradient(to bottom, transparent, $secondary-color, transparent);
 }
 
-
-
-
 .nameMid{
   font-size: 3rem;
-  
 }
 
 .profile{
@@ -202,8 +219,7 @@ background: linear-gradient(338deg, rgba(157,44,113,1) 0%, rgba(255,255,255,0) 1
   margin-left: 2rem;
   margin-bottom: 5rem;
   margin-top: 3rem;
-  background: rgb(157,44,113);
-background: linear-gradient(227deg, rgba(157,44,113,1) 0%, rgba(255,255,255,0) 12%);
+  
 }
 
 .slider-box{
@@ -221,6 +237,11 @@ background: linear-gradient(227deg, rgba(157,44,113,1) 0%, rgba(255,255,255,0) 1
   flex-direction: row;
   width: 100%;
   height: 25rem;
+  background-image: url(./Imagens/backgroundBox.png);
+  background-repeat: no-repeat;
+  background-size: 80% 80%;
+  background-position: center;
+  
   
 }
 
@@ -229,6 +250,7 @@ background: linear-gradient(227deg, rgba(157,44,113,1) 0%, rgba(255,255,255,0) 1
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  
 }
 
 .imgCarrousel{
@@ -240,27 +262,82 @@ background: linear-gradient(227deg, rgba(157,44,113,1) 0%, rgba(255,255,255,0) 1
 }
 
 .button11{
-  margin-top: 1.5rem;
+  margin-top: 1.3rem;
 }
+
+$speed: 0.5s;
 
 .btn-slider{
-  background-color: transparent;
-  border-radius: 10%;
-  padding: 0.5rem;
-  border: $secondary-color 0.2rem solid;
-  font-family: $font-stack;
-  color: $primary-color;
-  font-weight: 700;
-  cursor: pointer;
-  transition: 0.8s;
-  background-color: $secondary-color;
+  opacity: 1;
+	outline: 0;
+	line-height: 40px;
+	position: relative;
+	text-align: center;
+	letter-spacing: 1px;
+	display: inline-block;
+	text-decoration: none;
+	font-family: 'Open Sans';
+	text-transform: uppercase;
+  
+	
+	&:hover{
+		
+		&:after{
+			opacity: 1;
+			transform: translateY(0) rotateX(0);
+		}
+		
+		&:before{
+			opacity: 0;
+			transform: translateY(50%) rotateX(90deg);
+		}
+	}
+	
+	&:after{
+		top: 0;
+		left: 0;
+		opacity: 0;
+		width: 100%;
+		color: $secondary-color;
+		display: block;
+		transition: $speed;
+		position: absolute;
+		background: $primary-color;
+		content: attr(data-back);
+		transform: translateY(-50%) rotateX(90deg);
+	}
+	
+	&:before{
+		top: 0;
+		left: 0;
+		opacity: 1;
+		color: $primary-color;
+		display: block;
+		padding: 0 30px;
+		line-height: 40px;
+		transition: $speed;
+		position: relative;
+		background: $secondary-color;
+		content: attr(data-front);
+		transform: translateY(0) rotateX(0);
+	}
 }
 
-.btn-slider:hover{
-  color: $secondary-color;
-  background-color: $primary-color;
-  transition: 1.3s;
-  box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
+
+.body2{
+  background-image: url(./Imagens/background.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.inner-text-slider{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 40rem;
+  height: 30rem;
+  margin-right: 6rem;
 }
 
 
@@ -348,4 +425,6 @@ body {
     font-size:24px;
   }
 }
+
+
 

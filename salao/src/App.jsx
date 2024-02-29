@@ -1,15 +1,19 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
 import Logo from './Imagens/Logo.png'
-import ImgFoto from './Imagens/stefany1.png'
+// import ImgFoto from './Imagens/stefany1.png'
 import CarrouselMid from './Components/CarrouselBody2'
 import Instagram  from './Imagens/intagram.png'
 import Facebook from './Imagens/facebook.png'
 import TikTok from './Imagens/tiktok.png'
 import Wave from './Components/Wave'
+
+
 import './App.scss';
 
 function App() {
+  
+
   
   return (    
     <div className='main'>
@@ -18,9 +22,9 @@ function App() {
           <img src={Logo} className='logo' />
         </div>
         <div className='btn-box'>
-          <button className='btn' id='btn'>Identidade</button>
-          <button className='btn' id='btn'>Serviços</button>
-          <button className='btn' id='btn'>Contato</button>
+         <button className='btn' id='btn'>Identidade</button>
+         <button className='btn' id='btn'>Serviços</button>
+         <button className='btn' id='btn'>Contato</button>
         </div>
         <div className='redes-sociais'>
           <div className='media'>
@@ -40,8 +44,9 @@ function App() {
         <div className='profile'>
          <div className='perfil'>
           <div className='perfil1'>
-           <p className=' fname'>Stefany Nogueira</p>
-           <img src={ImgFoto} className='ImgFoto lineVert' />
+           {/* <p className=' fname'>Stefany Nogueira</p> */}
+           
+           <div className='ImgFotox'></div>
           </div>          
           <div className='text'>
             <p className='name'>Perfil</p>
@@ -54,15 +59,15 @@ function App() {
     </div>
     <div className='line'></div>
     <div className='text-mid'>
-     <p className='nameA nameMid'>Catagolo de Serviços</p>
+     <p className='nameA nameMid'>Catágolo de Serviços</p>
     </div>
-     <div className='body2'>
+     <div className='body2' alt='serviços'>
       <CarrouselMid/>
      </div>
-     <div className='body3'>
+     <div className='body3' alt='contato'>
       
      </div>
-     <div className='footer'></div>  
+     <div className='footer' alt='footer'></div>  
     </div>
   )
 }
