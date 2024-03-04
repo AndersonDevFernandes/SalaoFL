@@ -6,6 +6,12 @@ $third-color: rgb(157,44,113,255) 0px 20px 30px -10px;
 $four-color: #382B4F;
 $font-stack: "Playfair Display", serif;
 
+.slick-prev:before, .slick-next:before {
+  opacity: 0;
+  color: transparent;
+}
+
+
 *{
   box-sizing: border-box;
   padding: 0;
@@ -167,19 +173,16 @@ $font-stack: "Playfair Display", serif;
   font-family: $font-stack;
   color: $secondary-color;
   background: rgb(157,44,113);
-background: linear-gradient(338deg, rgba(157,44,113,1) 0%, rgba(255,255,255,0) 19%);
+  background: linear-gradient(338deg, rgba(157,44,113,1) 0%, rgba(255,255,255,0) 19%);
   padding: 1.3rem;
-
 }
 
 .nameA{
- font-size: 0.9rem;
+  font-size: 0.9rem;
   font-weight: 600;
   font-family: $font-stack;
   color: $primary-color;
   padding: 0.5rem;
-  
-
 }
 
 .line{  
@@ -241,8 +244,6 @@ background: linear-gradient(338deg, rgba(157,44,113,1) 0%, rgba(255,255,255,0) 1
   background-repeat: no-repeat;
   background-size: 80% 80%;
   background-position: center;
-  
-  
 }
 
 .slider-box-text{
@@ -337,7 +338,7 @@ $speed: 0.5s;
   flex-direction: column;
   width: 40rem;
   height: 30rem;
-  margin-right: 6rem;
+  margin-right: 3rem;
 }
 
 
@@ -426,5 +427,59 @@ body {
   }
 }
 
+// FORMULARIO
 
+.body3{
+  background-image: url(./Imagens/backgroundbox3.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100% 100%;
+  
+  
+}
 
+.imgPhoto{
+  border-radius: 50%;
+  border: 1px $secondary-color solid;
+  margin-bottom: 3.5rem;
+}
+
+.text-box3{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1rem; 
+}
+
+.imgProfile{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.mainBox{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  
+}
+
+.formulario{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.formStyle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  margin: 0.7rem;
+  border: 1px $secondary-color solid;
+  background-color: $primary-color;
+  color: $secondary-color;
+  font-weight: 700;
+}

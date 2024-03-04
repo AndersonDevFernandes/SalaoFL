@@ -1,19 +1,17 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
 import Logo from './Imagens/Logo.png'
-// import ImgFoto from './Imagens/stefany1.png'
 import CarrouselMid from './Components/CarrouselBody2'
 import Instagram  from './Imagens/intagram.png'
 import Facebook from './Imagens/facebook.png'
 import TikTok from './Imagens/tiktok.png'
 import Wave from './Components/Wave'
+import Body3 from './Components/Body3'
 
 
 import './App.scss';
 
 function App() {
-  
-
   
   return (    
     <div className='main'>
@@ -65,7 +63,7 @@ function App() {
       <CarrouselMid/>
      </div>
      <div className='body3' alt='contato'>
-      
+      <Body3/>
      </div>
      <div className='footer' alt='footer'></div>  
     </div>

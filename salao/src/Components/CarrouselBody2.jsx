@@ -1,26 +1,64 @@
 import Slider1 from "react-slick";
-import Cabelo1 from '../imagens2/cabelo1.png'
-import Cabelo2 from '../imagens2/cabelo2.png'
-import Cabelo3 from '../imagens2/cabelo3.png'
-import Unhas1 from '../imagens2/unhas1.png'
-import Unhas2 from '../imagens2/unhas2.png'
-import Unhas3 from '../imagens2/unhas3.png'
-import '../App.scss'
+import '../App.scss';
+import Cabelo1 from '../imagens2/cabelo1.png';
+import Cabelo2 from '../imagens2/cabelo2.png';
+import Cabelo3 from '../imagens2/cabelo3.png';
+import Unhas1 from '../imagens2/unhas1.png';
+import Unhas2 from '../imagens2/unhas2.png';
+import Unhas3 from '../imagens2/unhas3.png';
 
-
-// https://react-slick.neostack.com/docs/get-started
-
-
-export default function SimpleSlider() {
-  var settings = {
+function SimpleSlider() {
+  const settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    // arrows: false,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />
   };
+
+  function SampleNextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+      className={className}
+      style={{
+        ...style,
+        display: "block",
+        background: "#FFF0F7",
+        color: "#382B4F", // Cor da seta
+        fontSize: "3rem", // Tamanho da seta
+        zIndex: 10
+      }}
+      onClick={onClick}
+    >🡺</div>
+    );
+  }
+
+  function SamplePrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+      className={className}
+      style={{
+        ...style,
+        display: "block",
+        background: "#FFF0F7",
+        color: "#382B4F", // Cor da seta
+        fontSize: "3rem", // Tamanho da seta
+        zIndex: 10
+      }}
+      onClick={onClick}
+    >🡸</div>
+    );
+  }
   return (
   <div>
+    <div className='text-box3'>
+      <p className="name">SERVIÇOS</p>
+    </div>
    <div>
     <Slider1 className="Slider" {...settings}>
       <div className="slider-box">
@@ -68,10 +106,9 @@ export default function SimpleSlider() {
            <div className="button11">
             <button className="btn-slider btn-flip" data-back="Back" data-front="Front"></button>
           </div>
-        </div>
-          
          </div>
         </div>
+       </div>
       </div>
     </Slider1>
     <br />
@@ -131,3 +168,5 @@ export default function SimpleSlider() {
 
  );
 }
+
+export default SimpleSlider
