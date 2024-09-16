@@ -1,11 +1,13 @@
 import Slider1 from "react-slick";
-import '../App.scss';
 import Cabelo1 from '../imagens2/cabelo1.png';
 import Cabelo2 from '../imagens2/cabelo2.png';
 import Cabelo3 from '../imagens2/cabelo3.png';
 import Unhas1 from '../imagens2/unhas1.png';
 import Unhas2 from '../imagens2/unhas2.png';
 import Unhas3 from '../imagens2/unhas3.png';
+
+import '../App.scss';
+import '../MediaQ.css'
 
 function SimpleSlider() {
   const settings = {

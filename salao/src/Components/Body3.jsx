@@ -14,7 +14,7 @@ export default function Formulario() {
       <div className="mainBox">
         <div className="imgProfile">
          <p className='name'>Stefany Brito</p>
-         <img src={ImgFoto} alt=""  className="imgPhoto"/>1         
+         <img src={ImgFoto} alt=""  className="imgPhoto"/>        
         </div>
         <div className="formulario">
          <input className="input-name formStyle" type="text" name="name" placeholder="Nome Completo" required/>

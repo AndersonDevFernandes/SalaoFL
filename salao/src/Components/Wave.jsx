@@ -1,4 +1,5 @@
 import'../App.scss'
+import '../MediaQ.css'
 
 
 export default function Wave(){

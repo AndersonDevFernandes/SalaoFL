@@ -4,6 +4,7 @@ import Cabelo from '../Imagens/Cabelos.jpg'
 import Unhas from '../Imagens/Unhas.jpg'
 import Maquiagem from '../Imagens/Maquiagem.png'
 import '../App.scss'
+import '../MediaQ.css'
 
 // import '../Style.sass'
 
